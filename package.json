@@ -15,11 +15,13 @@
     "postinstall": "yarn dev"
   },
   "workspaces": [
+    "demo/*",
     "packages/*",
     "examples/*"
   ],
   "preconstruct": {
     "packages": [
+      "demo/*",
       "packages/*"
     ]
   },
