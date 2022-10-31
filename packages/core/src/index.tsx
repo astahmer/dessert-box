@@ -14,12 +14,18 @@ export function composeClassNames(...classNames: Array<string | undefined>) {
   return classes.length === 0 ? undefined : classes.join(' ');
 }
 
+export type PropValue = string | number | boolean;
+export type SprinklePropValue =
+  | PropValue
+  | PropValue[]
+  | { [key: string]: PropValue };
+
 export function extractAtomsFromProps<AtomsFn extends AtomsFnBase>(
   props: any,
   atomsFn: AtomsFn,
 ) {
   let hasAtomProps = false;
-  let atomProps: Record<string, unknown> = {};
+  let atomProps: Record<string, SprinklePropValue> = {};
   let otherProps: Record<string, unknown> = {};
   let customProps: Record<string, unknown> = {};
 

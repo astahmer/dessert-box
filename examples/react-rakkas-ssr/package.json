@@ -1,0 +1,29 @@
+{
+  "name": "dessert-box-example-react",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "rakkas",
+    "build": "rakkas build",
+    "preview": "rakkas preview",
+    "start": "node dist/server",
+    "test": "pnpm test:typecheck",
+    "test:typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vanilla-extract/vite-plugin": "^3.6.1",
+    "rakkasjs": "0.6.2-next.9",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.1"
+  },
+  "dependencies": {
+    "@dessert-box/react": "^0.4.0",
+    "@vanilla-extract/css": "^1.9.1",
+    "@vanilla-extract/recipes": "^0.2.5",
+    "@vanilla-extract/sprinkles": "^1.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
